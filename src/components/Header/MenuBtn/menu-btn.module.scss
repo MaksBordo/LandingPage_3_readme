@@ -1,0 +1,38 @@
+.menu-btn {
+  display: none;
+  background-color: transparent;
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  &__bar1,
+  &__bar2,
+  &__bar3 {
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+    &.menu-btn__signed-in {
+      background-color: #000;
+    }
+  }
+  &_active {
+    position: fixed;
+  }
+  &_active .menu-btn__bar2 {
+    opacity: 0;
+  }
+  &_active .menu-btn__bar1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+    background-color: #000;
+  }
+  &_active .menu-btn__bar3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+    background-color: #000;
+  }
+}
+@media screen and(max-width: 574px) {
+  .menu-btn {
+    display: block;
+  }
+}

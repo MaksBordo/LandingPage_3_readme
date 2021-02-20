@@ -1,0 +1,126 @@
+@import "../../assets/mixins/mixins.scss";
+.footer {
+  width: 100%;
+  height: 197px;
+  background-color: var(--footer-color);
+  &__container {
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 26px;
+    display: flex;
+  }
+  &__wrapper {
+    width: 146px;
+    margin-right: 40px;
+    &:first-of-type {
+      margin-right: 48px;
+    }
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  &__heading-btn {
+    width: 100%;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 1.16364px;
+    background-color: transparent;
+    text-align: start;
+    &:disabled {
+      color: #000;
+    }
+    &-arrow {
+      display: none;
+      font-size: 30px;
+      transition: all 0.3s;
+      &.footer__heading-btn-arrow_open {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__links {
+    margin-top: 11px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+  }
+  &__link {
+    margin-top: 6px;
+    display: block;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 0.1px;
+  }
+  &__social-links {
+    margin-top: 17px;
+    display: flex;
+  }
+  &__social-link {
+    margin-left: 16px;
+    &:first-of-type {
+      margin: 0;
+    }
+  }
+  &__copyright {
+    font-size: 9px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-top: 38px;
+  }
+  &__divider {
+    display: none;
+  }
+}
+@media screen and(max-width: 574px) {
+  .footer {
+    height: auto;
+    min-height: 280px;
+    &__container {
+      flex-direction: column;
+      width: 100%;
+      padding: 16px 16px 0;
+    }
+    &__wrapper {
+      width: 100%;
+      border-bottom: 1px solid #e1e0e1;
+      padding: 12.5px 16px;
+      &:first-of-type {
+        padding-top: 0;
+      }
+      &:last-of-type {
+        border: none;
+      }
+    }
+    &__links {
+      height: 0px;
+      overflow: hidden;
+      &.footer__links_open {
+        height: 80px;
+      }
+    }
+    &__heading-btn {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      &-arrow {
+        display: initial;
+      }
+      &_social {
+        display: none;
+      }
+    }
+    &__social-links {
+      justify-content: center;
+      margin-top: 11.5px;
+    }
+    &__social-link {
+      margin-left: 24px;
+    }
+    &__copyright {
+      margin: 0;
+    }
+  }
+}
