@@ -21,7 +21,7 @@ export const Footer = () => {
     setLinksOpen(linksOpen.map((item, index) => (index === id ? !item : item)));
   };
   return (
-    <div className={classes["footer"]}>
+    <footer className={classes["footer"]}>
       <div className={classes["footer__container"]}>
         <div className={classes["footer__wrapper"]}>
           <button
@@ -226,6 +226,6 @@ export const Footer = () => {
       <p className={classes["footer__copyright"]}>
         © Copyright, Aurora 2020. All Rights reserved.
       </p>
-    </div>
+    </footer>
   );
 };
