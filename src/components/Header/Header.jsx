@@ -14,7 +14,7 @@ const HeaderRender = ({ signInBtnActive, setSignInBtnActive }) => {
   const [menuBtnActive, setMenuBtnActive] = useState(false);
   const [openFormBtnActive, setOpenFormBtnActive] = useState(false);
   return (
-    <div
+    <header
       className={
         signInBtnActive
           ? `${classes["header"]} ${classes["header_signed-in"]}`
@@ -120,7 +120,7 @@ const HeaderRender = ({ signInBtnActive, setSignInBtnActive }) => {
           setMenuBtnActive(false);
         }}
       />
-    </div>
+    </header>
   );
 };
 export const Header = connect(
